@@ -1,0 +1,53 @@
+
+.header{
+    padding: 5px 120px;
+    width: 150px;
+    height: 70px;
+    background-color: #236B8E;
+    background-image: url(https://c1.wallpaperflare.com/preview/395/154/368/apple-business-camera-communication.jpg);
+    border-radius: 50px;
+}
+
+.border{
+    padding: 80px 50px;
+    width: 400px;
+    height: 450px;
+    border: 1px solid #236B8E;
+    border-radius: 0px;
+    background-color: #9AC0CD;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: #3a718d;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-style: normal;
+}
+
+.textbox{
+    padding: 10px 40px;
+    background-color: black;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+    
+::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.word{
+    color: #FFFFFF;
+    font-style: oblique;
+    forced-color-adjust: blue;
+    font-weight: bold;
+}
+
+.bottom{
+    color: #236B8E;
+    font-style: oblique;
+    font-weight: bold;
+}

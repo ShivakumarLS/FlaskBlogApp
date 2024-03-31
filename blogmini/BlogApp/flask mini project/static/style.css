@@ -1,0 +1,69 @@
+/* Store this code in 'style.css' file inside the 'static' folder*/
+
+.header{
+    padding: 5px 120px;
+    width: 150px;
+    height: 70px;
+    background-color: #236B8E;
+}
+
+.border{
+    padding: 80px 50px;
+    width: 400px;
+    height: 450px;
+    border: 1px solid #236B8E;
+    border-radius: 0px;
+    background-color: #9AC0CD;
+    background-image :url(https://wallpaperaccess.com/full/449895.jpg);
+    border-style: hidden;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: #236B8E;
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn1{
+    padding: 10px 40px;
+    background-color:rgb(115, 156, 170);
+    color: #FFFFFF;
+    font-style: normal;
+    border-radius: 10px;
+}
+.textbox{
+    padding: 10px 40px;
+    background-color:rgb(12, 83, 105);
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.txt{
+    padding: 10px 40px;
+    background-image :url(https://wallpaperaccess.com/full/449895.jpg);
+    background-color: purple;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+    
+::placeholder {
+    color: #FFFFFF;
+    opacity: 0.1;
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.word{
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.bottom{
+    color: white;
+    font-style: oblique;
+    font-weight: bold;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Display</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+    background-color: gray;
+    background-image: url(https://images.ctfassets.net/vfkpgemp7ek3/6Y4B2Xm2jEipEwnoQMX2d9/8e0305672e442875ebc723fd3b307213/Featured-blog-post-image.jpg);
+background-size: cover;
+}
+    h1{color: black;
+        
+    }
+    nav{
+        /* background-color: aquamarine; */
+    background-color: aquamarine;}
+    td,th{
+        background-color: aquamarine;
+    }
+</style>
+<body>
+    <nav class="navbar bg-light" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Blog App</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active" ><a href="/display">Home</a></li>
+            <li ><a href="/showall">Show All Blogs</a></li>
+            <!-- <li><a href="/register">Sign Up</a></li>         -->
+            <li><a href="/logout">Sign Out</a></li>
+            <!-- <li><a href="/report">product</a></li> -->
+          </ul>
+          <p class="navbar-text"  > Welcome to Blogged..!</p>
+        </div>
+      </nav>
+    <h1 class="style = font-family: 'Trebuchet MS';" >Hi.. {{msg}}..!</h1><hr>
+
+    <form action="{{ url_for('postblog') }}" method="post">
+            <input id="blog_title"  name="blog_title" type="text" placeholder="Enter the Title" class="form-group"/></br></br>
+            <input id="blog_content" name="blog_content" type="text"  placeholder="Enter Your Content" class="form-group"/></br></br>
+            <input type="submit" class="btn" value="Post Blog"></br>
+    </form>
+       <br><br><br>
+    <table class="table table-hover">
+      <thead class = "thead-dark">
+          <tr>
+              
+              <th scope="col">username</th>
+              <th scope="col">Title</th>
+              <th scope="col">Content</th>
+              <th scope="col">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for row in allblogs %}
+          <tr class="text-primary">
+          <td >{{row.2}}</td>
+          <td>{{row.0}}</td>
+          <td>{{row.1}}</td>
+          <td>
+              <a href="/update/{{row.0}}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modaledit{{row.3}}">Edit</a>
+              <a href="/delete/{{row.3}}" onclick="return confirm('Are Sure Want To Deleted ?')" class="btn btn-danger btn-sm">Delete</a>
+          </td>
+      </tr>
+      {%endfor%}
+      </tbody>
+      </table>
+</body>
+</html>
